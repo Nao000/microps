@@ -40,7 +40,7 @@ struct net_device {
     char name[IFNAMSIZ];
     uint16_t type;
     uint16_t mtu;
-    uint16_t flgas;
+    uint16_t flags;
     uint16_t hlen; /* header length */
     uint16_t alen; /* address length */
     uint8_t addr[NET_DEVICE_ADDR_LEN];
@@ -48,7 +48,7 @@ struct net_device {
         uint8_t peer[NET_DEVICE_ADDR_LEN];
         uint8_t broadcast[NET_DEVICE_ADDR_LEN];
     };
-    struct net_device_OPS *ops;
+    struct net_device_ops *ops;
     void *priv;
 };
 
